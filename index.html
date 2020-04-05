@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  <p> {{pet}} </p>
+  <p> {{car}} </p>
+  <button v-on:click=" changeMessage()"> Click here to change the message </button>
+  <input type ="text" v-model="message">
+  </div>
+  <!-- <script src="index.js"></script> -->
+</body>
+</html>
+
+<script>
+
+  var app = new Vue({
+  el: "#app",
+  data: {
+    message: "Martins!",
+    pet: "lulu",
+    car: "none"
+  },
+
+  methods: {
+  changeMessage: function() {
+    console.log('changing the message');
+    this.message = 'hola';
+  }
+  }
+});
+
+</script>
